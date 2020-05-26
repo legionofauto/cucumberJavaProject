@@ -1,0 +1,174 @@
+[1590502252.868][INFO]: Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 36142
+[1590502252.868][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1590502253.523][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--disable-popup-blocking", "--disable-notifications", "--allow-running-insecure-content" ],
+            "extensions": [  ]
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--disable-popup-blocking", "--disable-notifications", "--allow-running-insecure-content" ],
+         "extensions": [  ]
+      },
+      "pageLoadStrategy": "normal"
+   }
+}
+[1590502253.530][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1590502253.532][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1590502253.542][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-running-insecure-content --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-notifications --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension="C:\Users\McMahon\AppData\Local\Temp\scoped_dir10676_1661547829\internal" --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\McMahon\AppData\Local\Temp\scoped_dir10676_151419751" data:,
+[1590502254.686][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1590502256.701][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "83.0.4103.61",
+      "chrome": {
+         "chromedriverVersion": "83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416})",
+         "userDataDir": "C:\\Users\\McMahon\\AppData\\Local\\Temp\\scoped_dir10676_151419751"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:57180"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "e3d063f38d057d30629ecad3b963f269"
+}
+[1590502256.767][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND SetTimeouts {
+   "implicit": 15000
+}
+[1590502256.767][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE SetTimeouts
+[1590502256.773][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND MaximizeWindow {
+
+}
+[1590502256.773][INFO]: Waiting for pending navigations...
+[1590502256.775][INFO]: Done waiting for pending navigations. Status: ok
+[1590502256.777][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1590502258.901][INFO]: Waiting for pending navigations...
+[1590502258.903][INFO]: Done waiting for pending navigations. Status: ok
+[1590502258.903][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE MaximizeWindow {
+   "height": 744,
+   "width": 1382,
+   "x": -8,
+   "y": -8
+}
+[1590502258.909][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND Navigate {
+   "url": "https://www.facebook.com/"
+}
+[1590502258.909][INFO]: Waiting for pending navigations...
+[1590502258.910][INFO]: Done waiting for pending navigations. Status: ok
+[1590502259.157][INFO]: Waiting for pending navigations...
+[1590502260.903][INFO]: Done waiting for pending navigations. Status: ok
+[1590502260.903][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE Navigate
+[1590502260.989][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND FindElement {
+   "using": "css selector",
+   "value": "#u_0_v"
+}
+[1590502260.990][INFO]: Waiting for pending navigations...
+[1590502261.034][INFO]: Done waiting for pending navigations. Status: ok
+[1590502261.139][INFO]: Waiting for pending navigations...
+[1590502261.388][INFO]: Done waiting for pending navigations. Status: ok
+[1590502261.388][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "42485ded-096f-4c0b-8028-2862322479b7"
+}
+[1590502261.399][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND IsElementEnabled {
+   "id": "42485ded-096f-4c0b-8028-2862322479b7"
+}
+[1590502261.399][INFO]: Waiting for pending navigations...
+[1590502261.400][INFO]: Done waiting for pending navigations. Status: ok
+[1590502261.412][INFO]: Waiting for pending navigations...
+[1590502261.414][INFO]: Done waiting for pending navigations. Status: ok
+[1590502261.414][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE IsElementEnabled true
+[1590502261.419][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND Screenshot {
+
+}
+[1590502261.419][INFO]: Waiting for pending navigations...
+[1590502261.420][INFO]: Done waiting for pending navigations. Status: ok
+[1590502261.765][INFO]: Waiting for pending navigations...
+[1590502261.766][INFO]: Done waiting for pending navigations. Status: ok
+[1590502261.766][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABVYAAAJlCAYAAAAxcKmfAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3Xt8VOW99/3vmplMThMCCYcEJEFJQAJoAE1BI7QoGEVRFLeHVjdKZfdgX63uVtu7fex+fOx9W2qtfarVUk/FarVStNRDBEFRFMQKUSEIBCHhkHAKCRmSMMnMu..."
+[1590502262.299][INFO]: [e3d063f38d057d30629ecad3b963f269] COMMAND Quit {
+
+}
+[1590502262.734][INFO]: [e3d063f38d057d30629ecad3b963f269] RESPONSE Quit

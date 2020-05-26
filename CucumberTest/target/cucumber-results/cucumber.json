@@ -1,0 +1,113 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-26T14:12:42.998Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.CucumberTest.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login functionality exists",
+        "description": "",
+        "id": "cucumberjava-selenium-test;login-functionality-exists",
+        "after": [
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.CucumberTest.SecureShell.close()"
+            }
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.CucumberTest.PsStream.close()"
+            }
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.CucumberTest.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1135000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.CucumberTest.CommonSelenium.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7394000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a Google Chrome window is open",
+            "match": {
+              "location": "CucumberTest.CucumberTest.CommonSelenium.givenAGoogleChromeWindowIsOpen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1753000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I open Facebook website",
+            "match": {
+              "location": "CucumberTest.CucumberTest.CommonSelenium.whenIGoToFacebook()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1469000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Login button should exits",
+            "match": {
+              "location": "CucumberTest.CucumberTest.CommonSelenium.thenLoginButton()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "CucumberJava Selenium test",
+    "description": "",
+    "id": "cucumberjava-selenium-test",
+    "keyword": "Feature",
+    "uri": "classpath:CucumberTest/CucumberTest/seleniumTest.feature",
+    "tags": []
+  }
+]

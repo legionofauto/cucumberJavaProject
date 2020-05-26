@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.342">
+<testcase classname="CucumberJava Selenium test" name="Login functionality exists" time="11.926">
+<system-out><![CDATA[Given a Google Chrome window is open........................................passed
+When I open Facebook website................................................passed
+Then Login button should exits..............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

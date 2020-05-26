@@ -1,0 +1,91 @@
+Random acl stuff. 
+
+sudo find -l <linux_dir> -ls
+
+sudo find -l <linux_dir> ! \( -user root -group root -o -user ntp -group -npt \) -ls
+
+Get-ChildItem C:\Windows\System32\winevt\* -Recuse | Get-Acl | Export-Csv C:\temp\logfiles.csv
+
+Get-ChildItem C:\Windows\System32\winevt\* -Recuse | Get-Acl | Select-Object PSPath,AccessToString,Owner,Group | Format-List
+
+Get-ChildItem C:\Windows\System32\winevt\* -Recuse | where { $_.PSIsContainer }
+Get-ChildItem C:\Windows\System32\winevt\* -Recuse | where { !$_.PSIsContainer }
+
+Get-ChildItem C:\Windows\System32\winevt\* -Recuse | where-object { $_.Path -like '*\lib\*' } -or { $_.Path -like '*\exe\*' } 
+
+Get-ChildItem *.exe,*.bat,*.com -Recuse
+
+Get-ChildItem -path C:\this_dir,C:\that_dir
+
+
+#compare two objects with powershell
+Compare-Object $objOne #objTwo | where { $_.sideindicator -eq "<=" } | % { $_.inputobject }
+
+$getPrivUser = Get-ADUser -Filter * -properties memberof | Where-Object { ( $_.memberof -match "Something_Priv" ) } | Select-Object SamAccountName
+
+$privUsers - (@getPrivUser | Select-String -pattern '\S+.\S+\.' -AllMatches).Matches.Value;
+$privUsersArray - $privUsers.split(";");
+
+
+
+$getUnprivUser = Get-ADUser -Filter * -properties memberof | Where-Object { ( !$_.memberof -match "Something_Priv" ) } | Select-Object SamAccountName
+
+$getUnprivUser = $getUnprivUser | foreach { $_ + "." }
+
+
+
+________________________________________________________________________________
+# create a csv file form an excel file.
+
+$excelFile = "c:\temp\excelfile.xls";
+$Excel = New-Object -ComObject Excel.Application;
+$Excel.Visible = $false;
+$Excel.DisplayAlerts = $false;
+$wb = $Excel.Workbooks.Open($excelFile);
+foreach ($ws in $wb.Worksheets) {$ws.SaveAs("C:\temp\NewExcelFile.csv", 6) };
+$Excel.Quit();
+
+_________________________________________________________________________________
+#active directory stuff.
+
+#New User added to AD.
+if((Get-ADUser -Filter { samAccountName -eq '<test-user>' }) -ne $NULL) { Remove-ADUser -Identity '<test-user>' -Confirm: $False };
+New-ADUser -Name '<test-user>' -UserPrincipalName '<test-user>@<domain>' -Enabled $True -accountPasswor (ConvertTo-SecureString '<passwd>' -AsPlainText -Force) -passThru
+
+#Return if use exists
+Get-ADUser '<test-user>'
+
+#Delete User
+Remove-ADUser -Identity '<test-user>' -Confirm: $False
+
+
+Add-ADGroupMember -Identity '<group>' -Member '<test-user>'
+
+(Get-ADGroupMember -Identity '<group>' | Select-Object samAccountName)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
